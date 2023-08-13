@@ -70,7 +70,7 @@ import React from 'react';
 import { View, Text, TextInput, StyleSheet, Switch } from 'react-native';
 import { Controller } from 'react-hook-form';
 import DatePicker from 'react-native-datepicker';
-import 'react-datepicker/dist/react-datepicker.css'; // Import the CSS
+// import 'react-datepicker/dist/react-datepicker.css'; // Import the CSS
 
 const CustomInput = ({
                          control,

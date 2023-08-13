@@ -4,12 +4,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import AboutScreen from '../component/AboutScreen';
 import CustomDrawer from '../zynerator/CustomDrawer/CustomDrawer';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import PurchaseAdmin from "../component/admin/view/purchase/purchase/container/purchase-container-admin.component";
-import PurchaseAdminView from "../component/admin/view/purchase/purchase/view/purchase-view-admin.component";
-import PurchaseAdminList from "../component/admin/view/purchase/purchase/list/purchase-list-admin.component";
-import PurchaseAdminCreate from "../component/admin/view/purchase/purchase/create/purchase-create-admin.component";
-import PurchaseAdminEdit from "../component/admin/view/purchase/purchase/edit/purchase-edit-admin.component";
+import PurchaseAdmin from "../component/admin/view/core/purchase/container/purchase-container-admin.component";
+import PurchaseAdminView from "../component/admin/view/core/purchase/view/purchase-view-admin.component";
+import PurchaseAdminList from "../component/admin/view/core/purchase/list/purchase-list-admin.component";
+import PurchaseAdminCreate from "../component/admin/view/core/purchase/create/purchase-create-admin.component";
+import PurchaseAdminEdit from "../component/admin/view/core/purchase/edit/purchase-edit-admin.component";
+import ClientAdmin from '../component/admin/view/commun/client/container/client-container-admin.component';
 
 
 const Drawer = createDrawerNavigator();
@@ -47,6 +49,16 @@ function DrawerNavigation() {
                 options={{
                     drawerIcon: ({ color }) => (
                         <Ionicons name="cart-outline" size={22} color={color} />
+                    ),
+                }}
+            />
+
+            <Drawer.Screen
+                name="Client"
+                component={ClientAdmin}
+                options={{
+                    drawerIcon: ({ color }) => (
+                        <AntDesign name="customerservice" size={22} color={color} />
                     ),
                 }}
             />

@@ -1,8 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet, Text, View, } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import PurchaseAdminCreate from "../component/admin/view/purchase/purchase/create/purchase-create-admin.component";
-import PurchaseAdminList from "../component/admin/view/purchase/purchase/list/purchase-list-admin.component";
+import PurchaseAdminCreate from "../component/admin/view/core/purchase/create/purchase-create-admin.component";
+import PurchaseAdminList from "../component/admin/view/core/purchase/list/purchase-list-admin.component";
+import StackPurchaseAdmin from './StackPurchaseAdmin';
 
 
 
@@ -48,7 +49,7 @@ function TabNavigation() {
 
 
 
-            <Tab.Screen name="List" component={PurchaseAdminList} options={{
+            <Tab.Screen name="List" component={StackPurchaseAdmin} options={{
                 tabBarIcon: ({ focused }) => (
                     <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                         <Ionicons name="list-outline"

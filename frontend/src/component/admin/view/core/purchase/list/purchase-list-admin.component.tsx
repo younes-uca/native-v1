@@ -71,7 +71,7 @@ const PurchaseAdminList: React.FC = () =>  {
         try {
             const purchaseResponse = await service.find(id);
             const purchaseData = purchaseResponse.data;
-            //navigation.navigate('purchaseDetails', { purchase: purchaseData });
+            navigation.navigate('purchaseDetails', { purchase: purchaseData });
         } catch (error) {
             console.error('Error fetching purchase data:', error);
         }
